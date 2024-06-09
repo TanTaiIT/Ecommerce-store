@@ -2,9 +2,11 @@
 // Import
 import { SwiperSlide, Swiper } from 'swiper/vue';
 import { ref } from 'vue'
+import ProductCard from './ProductCard.vue'
 // Contanst
 const products = ref([
   {
+    id: 1,
     name: 'Long Product Name 1 You Might Forget the BeginningYou Might Forget the Beginning',
     cost: 29.99,
     image:
@@ -15,6 +17,7 @@ const products = ref([
     sold: 50,
   },
   {
+    id: 2,
     name: 'Very Long Product Name 2 with Many Words',
     cost: 39.99,
     image:
@@ -25,6 +28,7 @@ const products = ref([
     sold: 75,
   },
   {
+    id: 3,
     name: 'Product 3 with a Long Name That Goes On and On',
     cost: 49.99,
     image:
@@ -35,6 +39,7 @@ const products = ref([
     sold: 30,
   },
   {
+    id: 4,
     name: 'A Really Long Product Name 4 for Your Consideration',
     cost: 19.99,
     image:
@@ -45,6 +50,7 @@ const products = ref([
     sold: 40,
   },
   {
+    id: 5,
     name: "Product 5 with an Extremely Long Name that Doesn't End",
     cost: 59.99,
     image:
@@ -55,6 +61,7 @@ const products = ref([
     sold: 60,
   },
   {
+    id: 6,
     name: 'Product 6 with a Name So Long It Might Wrap to the Next Line',
     cost: 69.99,
     image:
@@ -65,6 +72,7 @@ const products = ref([
     sold: 90,
   },
   {
+    id: 7,
     name: 'Product 7 with a Name Long Enough to Fill the Space Provided',
     cost: 24.99,
     image:
@@ -75,6 +83,7 @@ const products = ref([
     sold: 25,
   },
   {
+    id: 8,
     name: 'Product 8 with a Really, Really Long Name That Keeps Going',
     cost: 79.99,
     image: 'https://via.placeholder.com/150',
@@ -84,6 +93,7 @@ const products = ref([
     sold: 120,
   },
   {
+    id: 9,
     name: 'Product 9 with an Absurdly Long Name Just for Fun',
     cost: 44.99,
     image: 'https://via.placeholder.com/150',
@@ -93,6 +103,7 @@ const products = ref([
     sold: 55,
   },
   {
+    id: 10,
     name: 'Product 10 with a Name So Long You Might Forget the Beginning',
     cost: 34.99,
     image: 'https://via.placeholder.com/150',
@@ -131,7 +142,7 @@ const products = ref([
             >
               <SwiperSlide v-for="product in products" :key="product.name" style="width: auto" class="w-fit">
                 <RouterLink :to="`/product/${product.id}`">
-                    <span>taichodien</span>
+                    <ProductCard :product="product"/>
                 </RouterLink>
 
               </SwiperSlide>

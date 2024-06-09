@@ -1,6 +1,8 @@
 <script setup>
 import SearchWrapper from '@/components/search/SearchWrapper.vue'
 import HomePage from '@/components/home/HomePage.vue'
+import ShopList from '@/components/home/ShopList.vue'
+import PromotionList from '@/components/home/PromotionList.vue'
 </script>
 
 <template>
@@ -12,6 +14,8 @@ import HomePage from '@/components/home/HomePage.vue'
                 </div>
 
                 <HomePage/>
+                <ShopList/>
+                <PromotionList/>
                 
             </div>
         </div>
